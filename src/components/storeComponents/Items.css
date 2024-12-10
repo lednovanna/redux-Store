@@ -1,11 +1,18 @@
 .container {
     width: 100%;
-   
+     
 }
 
 .item-image {
     width: 300px;
     height: 250px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item-image:hover {
+    transform: scale(1.1); 
+      
 }
 
 .card {
@@ -15,35 +22,41 @@
   background-color: rgb(39, 38, 38);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 300px;
-  height: 450px;
+  max-width: 300px;
+  height: 500px;
   justify-content: space-between;
- 
+  margin: 15px 5px;
   position: relative;
   transition: 0.2s;
-   
+  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .card:hover {
     box-shadow: 4px 8px 16px rgba(153, 119, 107, 0.4);
+    transform: translateY(-5px);
 }
 
 .container-card {
     display: grid;
+     width: 100%;
+    margin: 30px 10px;
+    gap: 20px;
+    justify-content: center;
     width: 100%;
     grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .card-title {
     font-size: 18px;
-    margin: 10px;
-
+    margin: 8px;
+    letter-spacing: 1px;
 }
 
 .card-description {
     margin: 0 10px 0 10px;
     font-size: 14px;
-
+    letter-spacing: 0.8px;
 }
 
 .card-price {
@@ -54,11 +67,13 @@
 .price {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    color: #e6e6fa;
+
 }
 
 .btn-qty {
     margin-left: 100px;
-    margin-top: 7px;
     height: 30px;
     border-radius: 8px;
     background-color: blanchedalmond;
@@ -71,8 +86,9 @@
 .btn-cart {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 8px;
+    padding: 5px;
     
 }
 
@@ -85,8 +101,36 @@
     width: 100%;
     height: 30px;
     font-size: 18px;
-    background-color: aquamarine;
+    background-color: #00d1b2;
     border-radius: 8px;
     border: 1px solid black;
     cursor: pointer;
+}
+
+button {
+    margin: 6px;
+    background-color: #dcd6f7;
+    border: none;
+    padding: 2px 7px;
+    font-weight: 500;
+}
+
+@media all and (max-width: 680px) {
+    .card {
+        max-width: 230px;
+    }
+
+    .item-image {
+        max-width: 230px;
+    }
+}
+
+@media all and (max-width: 480px) {
+   
+
+    .container-card {
+        margin: 30px 5px;
+    }
+
+   
 }

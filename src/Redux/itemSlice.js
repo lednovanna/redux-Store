@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const itemSlice = createSlice({
     name: 'item',
     initialState : {
-        selectedCategory: "М`ЯСО"
+        selectedCategory: "ВСІ"
     },
 
     reducers: {
